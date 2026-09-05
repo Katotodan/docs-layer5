@@ -13,7 +13,7 @@ aliases:
 Kanvas's Designer enables you to place comments "inline" with your infrastructure as code. Use comments to offer feedback to team members, take detailed design notes, capture helpful tips for your team members, and include justification as to your infrastructure and application configuration decisions. Pay it forward to your future self by leaving historical record for reference later.
 
 <figure>
-  <img src="./kanvas-comment.png" alt="Comments in Designer" />
+  <img src="images/kanvas-comment.png" alt="Comments in Designer" />
   <figcaption>Example of comments in Designer</figcaption>
 </figure>
 
@@ -29,7 +29,7 @@ You can add comments in a number of convenient ways. Since designs are public by
 2. You can also create a comment by dragging and dropping the comment icon from the Dock to your design. This method allows you to place comments directly on specific elements or areas of your design.
 
 <figure>
-<img src="./comment-dock.png" alt="Create a comment from the Dock" />
+<img src="images/comment-dock.png" alt="Create a comment from the Dock" />
   <figcaption>Create a comment from the Dock</figcaption>
 </figure>
 
@@ -38,7 +38,7 @@ You can add comments in a number of convenient ways. Since designs are public by
 Context-click on any area of your design, and from the contextual menu, select "Add a Comment". Using this context-click method allows for inline placement of your remarks right where you need them - _in context_.
 
 <figure>
-<img src="./comment-canvas.png" alt="Comment by context-clicking on your design" />
+<img src="images/comment-canvas.png" alt="Comment by context-clicking on your design" />
   <figcaption>Comment by context-clicking on your design</figcaption>
 </figure>
 
@@ -49,7 +49,7 @@ Context-click on any area of your design, and from the contextual menu, select "
 ## Design review using comments
 
 <figure>
-  <img src="./conversation-screenshot.png" alt="Peer review using comments in Designer" />
+  <img src="images/conversation-screenshot.png" alt="Peer review using comments in Designer" />
   <figcaption>Peer review using comments in Designer</figcaption>
 </figure>
 
@@ -69,7 +69,7 @@ Leave comments on specific elements within the design, whether it's a shape, tex
 
 ### Resolving a Comment
 
-Resolving a comment thread indicates that the conversation on that topic has concluded. When a comment is resolved, the comment component is removed from view on the canvas.
+Resolving a comment thread indicates that the conversation on that topic has concluded. When a comment is resolved, the comment component is removed from view on the canvas. You can resolve comment threads either directly on the canvas or from the comment history panel.
 
 As a practice, resolving comments can help expedite issue resolution on a particular topic. The action of resolving a comment is like a "soft delete" in that Kanvas designs retain history of each comment made and discussions within.
 
@@ -80,11 +80,19 @@ You can also reopen comments.
 ### View Comment History
 
 <figure>
-  <img src="./comments-conversation.gif" alt="View comment history" />
+  <img src="images/comments-conversation.gif" alt="View comment history" />
   <figcaption>View comment history</figcaption>
 </figure>
 
 Manage your comment history by clicking on the "View Comment History" button. This allows you to revisit past discussions and decisions, ensuring that important context is never lost.
+
+From the comment history panel, you can manage individual threads without leaving the review flow:
+
+- **Resolve comment threads** once a discussion is complete while keeping the thread available for future reference.
+- **Mute notifications** for a specific comment thread when you want to reduce email noise without changing your broader comment notification preferences.
+- **Delete individual comments** when they should be removed entirely instead of kept as part of the design's historical record.
+
+For most review workflows, resolving a comment is preferred over deleting it because resolution preserves context and lets you reopen the thread later if needed.
 
 ### Duplicating / Copying Comments
 
@@ -115,7 +123,7 @@ Copying a comment into another design does **not** change the target design’s 
 - Participants from the original thread may not have access
 - Notifications may still be sent, but users might not be able to view or respond
 
-Learn more about [sharing settings](/kanvas/designer/sharing).
+Learn more about [sharing settings]({{< ref "kanvas/designer/sharing/index.md" >}}).
 
 {{< /alert >}}
 
@@ -124,7 +132,7 @@ Learn more about [sharing settings](/kanvas/designer/sharing).
 - **Right-click and Copy**: Choose **Copy** to manually paste it later.
 
   <figure>
-    <img src="./comment-copy.gif" alt="Copy a comment" />
+    <img src="images/comment-copy.gif" alt="Copy a comment" />
     <figcaption>Copy a comment</figcaption>
   </figure>
 
@@ -159,7 +167,7 @@ You can temporarily hide or reveal open comments using the Layers panel—just l
 This helps you focus on the most important parts of your design and improves clarity during reviews.
 
 <figure>
-  <img src="./comments-hide.png" alt="Hide comments using Layers" />
+  <img src="images/comments-hide.png" alt="Hide comments using Layers" />
   <figcaption>Hide comments using the Layers panel</figcaption>
 </figure>
 
@@ -172,7 +180,7 @@ Want to improve the performance of your workspace? [Learn more about using the L
 If you plan to keep certain comments in your design for documentation, team reference, or historical context, it's a good idea to give them meaningful names. This simple habit improves clarity for both you and your team—especially when reviewing or revisiting designs later.
 
 <figure>
-  <img src="./naming-comments.png" alt="Naming a comment in Designer" />
+  <img src="images/naming-comments.png" alt="Naming a comment in Designer" />
     <figcaption>Naming a comment in Designer</figcaption>
 </figure>
 
@@ -188,7 +196,7 @@ If a comment is resolved by mistake, it can be reopened. Adding a new comment to
 Follow the steps below to reopen a comment:
 
 <figure>
-<img src="./comments-unresolved.gif" alt="Unresolving comments in designer" />
+<img src="images/comments-unresolved.gif" alt="Unresolving comments in designer" />
   <figcaption>Unresolving comments in designer</figcaption>
 </figure>
 
@@ -197,35 +205,43 @@ Follow the steps below to reopen a comment:
 Each time that a new comment is made in a design, remark placed into existing comment, a comment is resolved or reopened, you and your collaborators might receive notification via email.
 
 <figure>
-<img src="./example-notification-email.png" alt="Example email notification received when design comment is made" />
+<img src="images/example-notification-email.png" alt="Example email notification received when design comment is made" />
   <figcaption>Example email notification received when design comment is made.</figcaption>
 </figure>
 
-As the owner of a design, you will recieve notification each time a comment is made in your design. Tag other users and have them receive notificaiton of your comment by mentioning their username with the `@` symbol.
+As the owner of a design, you will receive notification each time a comment is made in your design. Tag other users and have them receive notification of your comment by mentioning their username with the `@` symbol. All users participating in a comment will be notified as new remarks are added in a comment thread.
 
-All users participating in a comment will be notified as new remarks are added in a comment thread.
-
-As new comments are added into the your design, collaborators (other users) with which you have shared the design, will not receive notification unless they are tagged in that comment.
+{{< alert type="info" title="Collaborator Notifications" >}}
+Collaborators (users you have shared the design with) do not receive notifications for new comments unless they are explicitly tagged in that comment. To notify a collaborator, mention them with the `@` symbol in your comment.
+{{< /alert >}}
 
 ### Enable Email Notifications
 
-Customize your [notification preferences](/cloud/identity/users/notification-preferences) to receive emails for comments on your design. When this is enabled, you'll be notified when comments are made on your design, you're mentioned in a comment, or someone adds a comment to a thread you've previously engaged with.
+Customize your [notification preferences]({{< ref "cloud/concepts/identity-and-security/users/notification-preferences/index.md" >}}) to receive emails for comments on your design. When this is enabled, you'll be notified when comments are made on your design, you're mentioned in a comment, or someone adds a comment to a thread you've previously engaged with.
 
 ### Muting Comment Notifications
 
-Customize your notification preferences to mute email notifications for comments on your design. With notifications for new comments silenced, you won't receive email notifications for new comments on your design. This can be useful if you want to temporarily pause notifications or reduce email clutter.
+You can mute email notifications for a specific comment thread directly from the comment box by clicking the notification bell icon, or from the comment history panel. Muting is useful when you want to temporarily pause updates on a specific discussion or reduce overall email clutter.
 
 <figure>
-  <img src="./comment-notificationBell.png" alt="Turn Off notification from comments in designer" style="width:auto">
+  <img src="images/comment-notificationBell.png" alt="Turn Off notification from comments in designer" style="width:auto">
   <figcaption>Example of comments in Designer</figcaption>
 </figure>
 
-You can also manage all your comment notification settings centrally through the **Cloud -> Account -> [Preference](https://docs.layer5.io/cloud/identity/users/notification-preferences/)**.
+{{< alert type="info" title="Thread-level Muting Behavior" >}}
+Muting a comment thread applies only to participants in that thread. Design owners continue to receive notifications for all activity within their design regardless of thread-level muting.
+{{< /alert >}}
+
+You can also manage all your comment notification settings centrally through the **Cloud -> Account -> [Preference](https://docs.layer5.io/cloud/concepts/identity-and-security/users/notification-preferences/)**.
 
 <figure>
-  <img src="./comment-cloud-manage.png" alt="Manage comment notifications in the Cloud Portal" style="width:auto">
+  <img src="images/comment-cloud-manage.png" alt="Manage comment notifications in the Cloud Portal" style="width:auto">
   <figcaption>Manage all comment notifications centrally in the Cloud</figcaption>
 </figure>
+
+{{< alert type="info" title="Global Notification Preferences" >}}
+Notification preferences set in Cloud apply across all designs. Disabling notifications via preferences stops email notifications for both owners and collaborators.
+{{< /alert >}}
 
 #### What Muting Affects
 
@@ -235,15 +251,15 @@ You can also manage all your comment notification settings centrally through the
 #### What Muting Doesn't Affect
 
 - **Mentions in Other Designs:** You'll still be notified if someone mentions you in new or existing comment threads on other designs in your portfolio.
-- **New Comment Threads:** Muting only applies to the specific comment thread it's activated on. New threads on the same design will trigger notifications as usual.
+- **New Comment Threads:** Muting applies only to the specific thread where it is activated. New threads on the same design follow standard notification behavior: design owners receive notifications for all comment activity, while other users receive notifications only if they are participants in the thread or are explicitly mentioned.
 
-{{< alert title="Muted Notifcations Reminder">}}
+{{< alert title="Muted Notifications Reminder" >}}
 
 - While email alerts are muted, you can still access and view all comments on the design at any time.
 - You'll never miss an important mention, as notifications for mentions outside the muted thread remain active.
   {{< /alert >}}
 
-{{< alert type="info" title="Missed Notifcations">}}
+{{< alert type="info" title="Missed Notifications" >}}
 Kanvas does not track the read or unread status of messages inside comment threads for each user. If a user is mentioned, but misses the notification, they might not become aware of the comment until they receive a new notification for another comment in that conversation.
 {{< /alert >}}
 
@@ -256,7 +272,7 @@ You can use color to visually categorize your comments. Here is one common examp
 
 
 <figure>
-  <img src="./comments-color.png" alt="Categorize Comments" />
+  <img src="images/comments-color.png" alt="Categorize Comments" />
   <figcaption>Use color to visually categorize your comments</figcaption>
 </figure>
 
@@ -274,7 +290,7 @@ Link your comment to a specific part of the design using **annotation arrows**. 
 Follow the steps about how to annotate the comment:
 
 <figure>
-<img src="./kanvas-annotations.gif" alt="use of annotation arrows" />
+<img src="images/kanvas-annotations.gif" alt="use of annotation arrows" />
   <figcaption>Annotating a comment</figcaption>
 </figure>
 
@@ -285,7 +301,7 @@ Lock comments in place to keep them visible even as you continue working. This i
 
 Example on how to lock your comment:
 <figure>
-<img src="./locking-comment.gif" alt="Lock the comment" />
+<img src="images/locking-comment.gif" alt="Lock the comment" />
   <figcaption>Locking comments </figcaption>
 </figure>
 
@@ -294,19 +310,19 @@ Example on how to lock your comment:
 Bundle multiple related comments using the **Group** feature. This keeps threads organized and easier to track, especially for complex designs with many parts.
 
 <figure>
-<img src="./grouping -comments.gif" alt="Grouping of Comments" />
+<img src="images/grouping -comments.gif" alt="Grouping of Comments" />
   <figcaption>Two related comments Grouped</figcaption>
 </figure>
 
 ### Resolving vs deleting comments
 
-Resolving a comment hides it from the canvas but keeps its history, so you can always revisit or reopen it later. Deleting a comment removes it entirely — including all threads and history — and cannot be undone.
+Resolving a comment hides it from the canvas but keeps its history, so you can always revisit or reopen it later. Deleting a comment removes it entirely — including all threads and history — and cannot be undone. You can delete individual comments from the comment history panel.
 
 ### Be specific and actionable
 
 Provide specific feedback that the designer can act on. Vague comments can lead to misunderstandings and delays in the design process. Support your feedback with examples or references. This can help clarify your point and provide the designer with tangible suggestions for improvement.
 
-### Balance positive and contructive feedback
+### Balance positive and constructive feedback
 
 Frame feedback in a constructive manner, focusing on how things can be improved rather than just pointing out flaws. Acknowledge what works well in the design before delving into areas that need improvement. This helps maintain a positive and collaborative atmosphere.
 

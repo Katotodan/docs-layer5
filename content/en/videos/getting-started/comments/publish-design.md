@@ -9,8 +9,8 @@ autoplay: true  # optional
 loop: true #optional
 categories: [Designer]
 formats: [video]
-tags: [catalog]
-duraiton: 0:39
+tags: [catalog, designs, publishing]
+duration: "0:39"
 ---
 
 {{< youtube id=UCKS4eSB7AY class="yt-embed-container" >}}

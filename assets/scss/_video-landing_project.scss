@@ -9,13 +9,12 @@
     overflow: hidden;
 
     nav {
-        //background-color: rgba(0, 0, 0, 0.3) !important;
-        background-color: transparent !important;
+        background-color: transparent ;
         border: none;
     }
     nav.scrolled {
-        background-color: $dark !important;
-        border: 1px solid #333 !important;
+        background-color: $dark;
+        border: 1px solid #333;
     }
 }
 
@@ -239,6 +238,20 @@ a#videoPageLink:focus {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
     margin-bottom: 2rem;
+}
+
+.video-grid-container {
+    position: relative;
+    min-height: 500px;
+    transition: min-height 0.15s ease;
+}
+
+.video-group {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
 }
 
 .video-card {

@@ -1,11 +1,11 @@
 ---
 title: Kanvas Documentation
-description: Kanvas delivers a collaborative experience for engineers similar to how Google Workplace transforms the digital work environment and how Figma democratizes UX design tooling. 
+description: Kanvas delivers a collaborative experience for engineers similar to how Google Workplace transforms the digital work environment and how Figma democratizes UX design tooling.
 linkTitle: Kanvas
 type: docs
 menu: {main: {weight: 3}}
 weight: 1
-cascade: 
+cascade:
     type: docs
 aliases:
     - /meshmap/
@@ -20,60 +20,16 @@ aliases:
 
 {{% pageinfo %}}
 
-<style>
-    .highlight-box {
-      display: flex;
-      align-items: center;
-      font-style: italic;
-      gap: 0.5rem;
-      padding: 1rem;
-      margin: auto -1rem;
-      box-shadow: inset 0 0em 4em #ebc01766, 0 0 0 2px #ebc01766, 0.3em 0.3em 1em #ebc01733;
-      transition: box-shadow 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-    }
-    .hidden-highlight-box {
-      display: flex;
-      align-items: center;
-      font-style: italic;
-      gap: 0.5rem;
-      padding: 1rem;
-      margin: auto -1rem;
-      box-shadow: none;
-      transition: box-shadow 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-    }
-    .hidden-highlight-box:hover {
-      box-shadow: inset 0 0em 4em #ebc01766, 0 0 0 2px #ebc01766, 0.3em 0.3em 1em #ebc01733;
-    }
-    /* New rule to hide highlight-box shadow when hidden-highlight-box is hovered or focused */
-    .hidden-highlight-box:hover ~ .highlight-box,
-    .hidden-highlight-box:focus ~ .highlight-box {
-      box-shadow: none;
-    }
-</style>  
 ## Understanding the Layer5 Ecosystem
 
-<a href="/cloud">
-<div class="hidden-highlight-box"  style="display:flex; gap: 1.5rem;">
-<div style="min-width:50px;align-self:center;line-height:1.85rem;">{{< svg name="cloud" >}}</div>
-<div style="margin:auto;color:#ccc;">
-  <strong>Layer5 Cloud</strong> is an identity provider and global console for deployments with an extensible and highly flexible authorization framework, tenant entitlement services, service provider-grade organizational hierarchy, team workspace management and a content catalog for public and private hosting of cloud native architectures. Layer5 Cloud is available as a service or self-hosted.
-</div>
-</div>
-</a>
+{{< ecosystem-box link="cloud/_index.md" icon="cloud" class="hidden-highlight-box" title="Layer5 Cloud" >}}
+is an identity provider and global console for deployments with an extensible and highly flexible authorization framework, tenant entitlement services, service provider-grade organizational hierarchy, team workspace management and a content catalog for public and private hosting of cloud native architectures. Layer5 Cloud is available as a service or self-hosted.
+{{< /ecosystem-box >}}
 
+{{< ecosystem-box icon="images/logos/kanvas-icon-color.svg" image="true" title="Kanvas" >}}
+delivers a collaborative experience similar to how Google Workplace transforms the digital work environment and how Figma democratizes UX design tooling. Kanvas simplifies the complexity of Kubernetes and multi-cloud infrastructure management accessible to all. Kanvas provides a visual, multi-player experience that allows you to create, configure, deploy, and manage modern infrastructure with confidence.
+{{< /ecosystem-box >}}
 
-<a href="/kanvas">
-<div class="highlight-box" style="display:flex; gap: .5rem;">
-<div style="min-width:50px;align-self:center;">
-<img src="/images/logos/kanvas-icon-color.svg" style="height:65px;width:65px;margin-left:-.45rem; border:0px;  background-color: transparent;" alt="kanvas logo"/></div>
-<div style="margin:auto; padding-left:1rem; color:#ccc; line-height:1.85rem;">
-<strong>Kanvas</strong> delivers a collaborative experience similar to how Google Workplace transforms the digital work environment and how Figma democratizes UX design tooling. Kanvas simplifies the complexity of Kubernetes and multi-cloud infrastructure management accessible to all. Kanvas provides a visual, multi-player experience that allows you to create, configure, deploy, and manage modern infrastructure with confidence.</div></div>
-</a>
-</div>
 {{% /pageinfo %}}
 
 ## What is Kanvas?
@@ -88,16 +44,16 @@ Choose your mode of operation for Kanvas.
 
 <div style="display:flex;justify-content:center;">
 {{< cardpane >}}
-    <a href="../kanvas/designer/">
+    <a href="{{< ref "kanvas/designer/_index.md" >}}">
   {{< card header="Designer" >}}
-    <a href="../kanvas/designer/">Designer</a> mode is for those who want to create their own Kanvas, using the palette of components.
+    <a href="{{< ref "kanvas/designer/_index.md" >}}">Designer</a> mode is for those who want to create their own Kanvas, using the palette of components.
     <p>Drag-and-drop your cloud native infrastructure using a palette of thousands of versioned Kubernetes components.</p>
     <p>Use context-aware relationships configure your infrastructure intuitively.</p>
   {{< /card >}}
     </a>
-  <a href="../kanvas/operator/">
+  <a href="{{< ref "kanvas/operator/_index.md" >}}">
   {{< card header="Operator" >}}
-    <a href="../kanvas/operator/">Operator</a> mode is for operating your Kubernetes clusters and cloud native infrastructure.
+    <a href="{{< ref "kanvas/operator/_index.md" >}}">Operator</a> mode is for operating your Kubernetes clusters and cloud native infrastructure.
     <p>Bring all your Kubernetes clusters under a common management. Deploy designs, apply patterns, manage and operate your deployments and services in real-time.</p>
     <p>Interactively connect to pods and containers to debug and troubleshoot.</p>
   {{< /card >}}

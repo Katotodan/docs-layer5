@@ -25,24 +25,24 @@ To understand its unique role, here is a comparison with other content types in 
 | Outcome | Acquired knowledge and skills. | A score, rank status. | An optional, paid official certificate and a verifiable badge.|
 
 {{< alert type="info" title="Certification: Focus on Assessment, Not Instruction" >}}
-A Certification is ideal when the main objective is to test, not teach. It assumes learners have prior knowledge and are ready to prove their expertise.
+A Certification is ideal when the main objective is to test, not teach. It assumes learners have prior knowledge and are ready to prove their expertise. If the objective is instead for the learner to solve a concrete, hands-on problem, build a [Challenge]({{< ref "cloud/academy/creating-content/building-challenges/index.md" >}}) rather than a Certification.
 {{< /alert >}}
 
 ## How to Create Your Certification
 
 Building a new certification involves setting up the correct directory structure and defining its properties through Markdown frontmatter.
 
-### Find Your Organization UUID and Certification ID
+### Find Your Organization ID and Certification ID {#find-your-organization-uuid-and-certification-id}
 
-{{< alert type="warning" title="Important: Replace UUIDs" >}}
-Throughout this guide, you'll see references to `<your-organization-uuid>` and `<your-certification-uuid>` placeholders. Make sure to replace all of these with your actual UUIDs from the [Instructor Console](https://cloud.layer5.io/academy/instructors-console) when implementing your certification.
+{{< alert type="warning" title="Important: Replace the Placeholder IDs" >}}
+Throughout this guide, you'll see references to `<your-organization-uuid>` and `<your-certification-uuid>` placeholders. Make sure to replace all of these with your actual IDs from the [Instructor Console](https://cloud.layer5.io/academy/instructors-console) when you build your certification.
 {{< /alert >}}
 
-Each certification is tied to a specific organization and secured by a unique identifier (UUID). This is a system-generated ID that ensures your content is scoped only to your organization.
+Each certification is tied to a specific organization and secured by a unique identifier. Layer5 Cloud generates these IDs for you, and they are what keep your content visible only under your own organization.
 
-You'll need two types of UUIDs:
+You'll need two IDs:
 - **Certification ID**: A unique identifier for your specific certification that gets added to the front matter of your certification's index file
-- **Organization ID**: Your organization's UUID that's used in directory paths
+- **Organization ID**: Your organization's own ID, used in directory paths
 
 {{< alert type="info" title="Generating Your IDs from the Instructor Console" >}}
 
@@ -108,7 +108,7 @@ badge:
 | Field | Required | Description |
 | :--- | :--- | :--- |
 | `type` | ✅  | Must be set to `"certification"` to identify this content correctly. |
-| `id` | ✅  | **Crucial.** A stable UUID for tracking progress. **Do not change.** |
+| `id` | ✅  | **Crucial.** A stable ID used to track learner progress. **Do not change.** |
 | `title` | ✅  | The human-readable title that will be displayed to users. |
 | `description` | ✅  | A comprehensive summary of the certification's scope and objectives. |
 | `weight` | - | Controls the display order (lower numbers appear first). Items are sorted alphabetically by title if not specified.|
@@ -128,19 +128,19 @@ A certification is primarily composed of exams. However, you can also include st
 {{< alert type="info" title="How to Create and Configure Exams" >}}
 Every "Exam" file within a certification follows the unified Academy assessment standard.
 
-For detailed instructions on how to write an exam file, define various question types, set scoring and passing percentages, and use advanced options, please refer to our comprehensive [Integrating Assessments in the Academy](../integrating-assessments-in-the-academy/) guide.
+For detailed instructions on how to write an exam file, define various question types, set scoring and passing percentages, and use advanced options, please refer to our comprehensive [Integrating Assessments in the Academy]({{< ref "cloud/academy/creating-content/integrating-assessments-in-the-academy.md" >}}) guide.
 {{< /alert >}}
 
 ### 4. Managing Question Pools and Test Attempts
 
 A **test** can include more questions than those presented to users in a single attempt, effectively turning it into a **test bank** — collection of all possible questions available for that test. When users retry the test, a new set of questions is drawn from the test bank for each attempt.
 
-This behavior is controlled by the `number_of_questions` property in the front matter.
+This behavior is controlled by the `numberOfQuestions` property in the front matter.
 
-* If `number_of_questions` is **not defined**, all questions in the test are used in every attempt.
+* If `numberOfQuestions` is **not defined**, all questions in the test are used in every attempt.
 * If it **is defined**, the test is automatically divided into multiple sets, each containing the specified number of questions.
 
-To ensure even division, the **total number of questions** must be a **multiple** of `number_of_questions`.
+To ensure even division, the **total number of questions** must be a **multiple** of `numberOfQuestions`.
 
 By default, the **number of retries** is set to the number of generated sets. However, you can increase it, in which case the question sets will **cycle** through repeatedly across attempts.
 
@@ -194,7 +194,7 @@ An optional exam is supplementary material. Learners can take it, but they **do 
 <details>
   <summary>How do I set an exam as "Optional"?</summary>
   
-You need to add a specific field, `is_optional: true`, to the front matter of the exam's `.md` file. This field tells the system that the exam is not a mandatory requirement to pass the certification.
+You need to add a specific field, `isOptional: true`, to the front matter of the exam's `.md` file. This field tells the system that the exam is not a mandatory requirement to pass the certification.
 </details>
 
 <details>

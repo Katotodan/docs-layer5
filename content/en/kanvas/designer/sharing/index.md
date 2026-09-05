@@ -12,7 +12,11 @@ aliases:
 In Kanvas, you can share your designs with other members of your organization and teams, and you can control access permissions. This page describes the different access types for designs and how to effectively use them.
 
 {{< alert title="Sharing Views" type="info">}}
-You can share and control access to [Views](/kanvas/operator/views) in the same fashion as you do for Designs.
+You can share and control access to [Views]({{< ref "kanvas/operator/views/index.md" >}}) in the same fashion as you do for Designs.
+{{< /alert >}}
+
+{{< alert title="Verify People with Access after sharing" type="warning">}}
+In some earlier cases, the Share modal could report success while the grant or revoke was not applied. If you shared a design or view and collaborators still cannot open it—or someone you removed still has access—open **Share** on that resource and re-check the **People with Access** list. Re-add anyone who is missing, remove anyone who should not retain access, and confirm that collaborators can open the resource. Always treat **People with Access** as the source of truth after every share.
 {{< /alert >}}
 
 ## Understanding visibility levels
@@ -27,7 +31,7 @@ Designs have visibility statuses that defines who can access your designs. These
 Public status is useful for sharing designs broadly, for example, as open-source templates, public demonstrations, or for soliciting feedback from a wider community. If your goal is to share broadly only within your organization, consider using a combination of private designs shared with specific organization-wide teams or workspaces.
 {{< /alert >}}
 
-- **Published:**  The published visibility setting is designed for sharing designs with a wider audience. Published designs become discoverable to other users and allow them to view, download, and clone the design. Users can find published designs through [Cloud Catalog](/cloud/catalog) ([open catalog](https://cloud.layer5.io/catalog)).
+- **Published:**  The published visibility setting is designed for sharing designs with a wider audience. Published designs become discoverable to other users and allow them to view, download, and clone the design. Users can find published designs through [Cloud Catalog]({{< ref "cloud/concepts/catalog/_index.md" >}}) ([open catalog](https://cloud.layer5.io/catalog)).
 
 ## Granting access to individual users
 
@@ -45,11 +49,11 @@ There are two primary ways to open the "Share" modal for a design:
     * Click the **more options icon** (often represented by three vertical dots ⋮) associated with that design.
     * Select **"Share"** from the context menu that appears.
 
-![Ways to open Share modal](/kanvas/designer/sharing/model-where.gif)
+![Ways to open Share modal](images/model-where.gif)
 
 Once the "Share" modal is open, type the names or email addresses of the users or teams you want to invite as Collaborators. From the "Share" modal, you can also typically change the overall visibility status of the design (e.g., switching between Private and Public).
 
-![Share Modal](/kanvas/designer/sharing/share-model.png)
+![Share Modal](images/share-model.png)
 
 ## Owner vs. Collaborator
 
@@ -94,7 +98,7 @@ As the Owner of a design, you can manage who has access to it at any time using 
 
 {{< alert title="Implications of adding a Design to a Workspace">}}
 When you add design to a workspace, it signifies that all teams associated with that workspace will be allowed to access your designs even if it is private. Review your workspace's team assignments in order to verify which users will be granted access.
-Learn more about [auditing and assigning Workspace access](/cloud/spaces/workspaces/).
+Learn more about [auditing and assigning Workspace access]({{< ref "cloud/concepts/spaces/workspaces.md" >}}).
 {{< /alert >}}
 
 ## Sharing Your Design with a Link
@@ -128,7 +132,21 @@ There are two primary ways to share designs with teams:
         2.  Assign one or more Teams to that same Workspace.
         3.  By this association, members of the assigned Team(s) should then inherit access to the **designs** within that Workspace, including Private designs.
 
-> Learn more about auditing the access permission within [workspace](/cloud/spaces/workspaces/)
+> Learn more about auditing the access permission within [workspace]({{< ref "cloud/concepts/spaces/workspaces.md" >}})
+
+## Share and visibility notifications
+
+Kanvas surfaces explicit notifications when a share or visibility action cannot complete. These messages replace earlier silent failures so you can tell success apart from an incomplete request.
+
+| Situation | What you see | What to do |
+| --- | --- | --- |
+| You change visibility on a resource kind that does not support a visibility mutation | A notification that the visibility change is **unsupported** for that resource (not a success message) | Keep the resource's current visibility, or use a resource kind that supports Private / Public / Published transitions. |
+| You click **Share** while the design or view body is still loading, or after the body failed to load | A notification that **sharing is unavailable** | Wait until the resource finishes loading, then open Share again. If the body failed to load, refresh or reopen the resource and retry once it loads successfully. |
+| The Share modal cannot load the access list | A notification that the **access list failed to load**, instead of an empty collaborator list | Close and reopen Share, or refresh the page. Do not assume that an empty list means nobody has access—until the list loads, the owner row and existing grants may be hidden, which also blocks revoke actions. |
+
+{{< alert title="People with Access is authoritative" type="note">}}
+After any grant or revoke, confirm the result in **People with Access** before you rely on the change. A success path updates that list; if the list did not load or the expected user is missing, treat the share as incomplete and retry.
+{{< /alert >}}
 
 [^1]: This functionality is not fully implemented yet. Users might occasionally observe that even when a team is assigned to a workspace, members of that team may not be able to access private designs within that workspace without explicit individual or team-level sharing for the design itself.
 [^2]: This feature (direct sharing with teams via the "Share" modal) is not yet fully implemented and is planned for a future update.

@@ -5,72 +5,37 @@ description: >
 linkTitle: Cloud
 type: docs
 menu: {main: {weight: 2}}
-cascade: 
+cascade:
     type: docs
 ---
 
 {{% pageinfo %}}
 
-<style>
-    .highlight-box {
-      display: flex;
-      align-items: center;
-      font-style: italic;
-      gap: 0.5rem;
-      padding: 1rem;
-      margin: auto -1rem;
-      box-shadow: inset 0 0em 4em #ebc01766, 0 0 0 2px #ebc01766, 0.3em 0.3em 1em #ebc01733;
-      transition: box-shadow 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-    }
-    .hidden-highlight-box {
-      display: flex;
-      align-items: center;
-      font-style: italic;
-      gap: 0.5rem;
-      padding: 1rem;
-      margin: auto -1rem;
-      box-shadow: none;
-      transition: box-shadow 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-    }
-    .hidden-highlight-box:hover {
-      box-shadow: inset 0 0em 4em #ebc01766, 0 0 0 2px #ebc01766, 0.3em 0.3em 1em #ebc01733;
-    }
-    /* New rule to hide highlight-box shadow when hidden-highlight-box is hovered or focused */
-    .hidden-highlight-box:hover ~ .highlight-box,
-    .hidden-highlight-box:focus ~ .highlight-box {
-      box-shadow: none;
-    }
-</style>  
-
 ## Understanding the Layer5 Ecosystem
 
-<div class="highlight-box" style="display:flex; gap: 1.5rem;">
-                
-<div style="min-width:50px;align-self:center;line-height:1.85rem;">{{< svg name="cloud" >}}</div>
+{{< ecosystem-box icon="cloud" title="Layer5 Cloud" >}}
+is an identity provider and global console for Kanvas and Meshery deployments with an extensible and highly flexible authorization framework, tenant entitlement services, service provider-grade organizational hierarchy, team workspace management and a content catalog for public and private hosting of cloud native architectures. Layer5 Cloud is available as a service or self-hosted.
+{{< /ecosystem-box >}}
 
-<div style="margin:auto;">
+{{< ecosystem-box link="kanvas/_index.md" icon="images/logos/kanvas-icon-color.svg" image="true" class="hidden-highlight-box" title="Kanvas" >}}
+delivers a collaborative experience similar to how Google Workplace transforms the digital work environment and how Figma democratizes UX design tooling. Kanvas simplifies the complexity of Kubernetes and multi-cloud infrastructure management accessible to all. Kanvas provides a visual, multi-player experience that allows you to create, configure, deploy, and manage modern infrastructure with confidence.
+{{< /ecosystem-box >}}
 
-  **Layer5 Cloud** is an identity provider and global console for Kanvas and Meshery deployments with an extensible and highly flexible authorization framework, tenant entitlement services, service provider-grade organizational hierarchy, team workspace management and a content catalog for public and private hosting of cloud native architectures. Layer5 Cloud is available as a service or self-hosted.
-</div>
-</div>
-
-<a href="/kanvas">
-  <div class="hidden-highlight-box">
-    <div style="min-width:50px; align-self:center;">
-      <img src="/images/logos/kanvas-icon-color.svg" alt="kanvas logo" style="height:65px;width:65px;margin-left:-.45rem; border:0 ; background-color: transparent;" />
-    </div>
-    <div style="margin:auto; padding-left:1rem; color:#ccc; line-height:1.85rem;">
-      <strong>Kanvas</strong> delivers a collaborative experience similar to how Google Workplace transforms the digital work environment and how Figma democratizes UX design tooling. Kanvas simplifies the complexity of Kubernetes and multi-cloud infrastructure management accessible to all. Kanvas provides a visual, multi-player experience that allows you to create, configure, deploy, and manage modern infrastructure with confidence.
-    </div>
-  </div>
-</a>
-
-</div>
 {{% /pageinfo %}}
+
+## What is Layer5 Cloud?
+
+Layer5 Cloud is the centralized management console and identity provider for the Layer5 ecosystem — specifically for **Kanvas** and **Meshery** deployments. It provides an extensible, highly flexible authorization framework that enables organizations to govern complex, multi-cloud infrastructure with confidence. Think of it as the command center where your teams, workspaces, and cloud-native assets come together under a single, unified platform.
+
+Layer5 Cloud is available both as a fully managed service and as a [self-hosted]({{< ref "cloud/guides/self-hosted/_index.md" >}}) deployment, giving organizations the flexibility to meet their own security and compliance requirements.
+
+## Why use Layer5 Cloud?
+
+- **Unified Identity and Access Management**: Define and enforce granular Role-Based Access Control (RBAC) across your organizations, teams, and users — all from one place.
+- **Collaborative Infrastructure Design**: Like Google Workspace for teams or Figma for designers, Layer5 Cloud enables real-time, multi-player collaboration on infrastructure patterns and deployments.
+- **Content Catalog**: Publish, discover, and reuse cloud-native architectures and patterns — either publicly or privately within your organization.
+- **Multi-Tenancy and Organizational Hierarchy**: Support service provider-grade structures with tenant entitlement services and a flexible organizational model that scales with your business.
+- **Flexible Deployment**: Run Layer5 Cloud as a SaaS product or bring it on-premises — your infrastructure, your rules.
 
 <!-- {{< blocks/section color="dark" type="row" >}}
 {{% blocks/feature icon="fa-lightbulb" title="Fastest OS **on the planet**!" %}}
